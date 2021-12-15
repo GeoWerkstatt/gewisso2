@@ -1,0 +1,7 @@
+.ionide/
+.vscode/
+
+# Ignore scripts to prevent accidential disclosure of credentials
+*.cmd
+*.bat
+*.sh
