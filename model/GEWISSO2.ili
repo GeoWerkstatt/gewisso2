@@ -167,10 +167,10 @@ MODEL GewISSO_V2 (de) AT "https://afu.so.ch/" VERSION "2022-01-19" =
                 rOekomorph -- {0..*} Oekomorph;   
             END Oekomorph_Basisgeometrie;
 
-            ASSOCIATION Fischenz_Basisgeometrie = 
+            ASSOCIATION FischenzAbschnitt_Basisgeometrie = 
                 rGewaesser -- {1} GewaesserBasisgeometrie;
-                rFischenzAbschnitt -- {0..*} rFischenzAbschnitt;   
-            END Fischenz_Basisgeometrie;
+                rFischenzAbschnitt -- {0..*} FischenzAbschnitt;   
+            END FischenzAbschnitt_Basisgeometrie;
 
             ASSOCIATION Fischenz_FischenzAbschnitt = 
                 rFischenz -- {1} Fischenz;
