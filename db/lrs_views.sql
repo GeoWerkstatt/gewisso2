@@ -1,5 +1,5 @@
 
-drop view gewaesser_v;
+drop view if exists gewaesser_v;
 create view gewaesser_v
 as select * from 		  
 		    GewaesserBasisgeometrie bg
@@ -7,7 +7,7 @@ as select * from
 		    GewaesserEigenschaften eig on bs.rgewaesser = eig.t_id;
 
 
-drop view oekomorph_v cascade;
+drop view if exists oekomorph_v;
 create view oekomorph_v as 
 select 
   r.t_id,
@@ -56,7 +56,7 @@ join
   oekomorph attr on r.t_id = attr.t_id;
 
  
-drop view fischenzabschnitt_fischenz_v;  
+drop view if exists fischenzabschnitt_fischenz_v;  
 create view fischenzabschnitt_fischenz_v
 as select seg.t_id, seg.geometrie, seg.nutzung, ent.revierid, ent.fischenzname, ent.fischenzbeschreibung, ent.eigentum, ent.bonitierung, ent.fischbestand, ent.fischerei, ent.rgewaesser from 		  
 		    fischenzabschnitt seg
@@ -64,7 +64,7 @@ as select seg.t_id, seg.geometrie, seg.nutzung, ent.revierid, ent.fischenzname, 
 		    fischenz ent on seg.rfischenz = ent.t_id;
 
  
-drop view fischenz_v cascade;
+drop view if exists fischenz_v;
 create view fischenz_v as  
 select 
   r.t_id,
@@ -91,10 +91,10 @@ from
 	    gewaesserbasisgeometrie netz on seg.rgewaesser = netz.t_id) q
   where q.m1 != q.m2 and (q.m1 != 'NaN'::numeric or q.m2 != 'NaN'::numeric)) r
 join
-  fischenzabschnitt_fischenz_v attr on r.t_id = attr.t_id
+  fischenzabschnitt_fischenz_v attr on r.t_id = attr.t_id;
 
 
-drop view bauwerk_v CasCADE;
+drop view if exists bauwerk_v;
 create view bauwerk_v as  
 select
 	    ST_LineInterpolatePoint(ST_CurveToLine(netz.geometrie),ST_LineLocatePoint(ST_CurveToLine(netz.geometrie), seg.geometrie)) as geometrie,
@@ -108,10 +108,10 @@ select
 	  from
 	    bauwerk seg
 	  join
-	    gewaesserbasisgeometrie netz on seg.rgewaesser = netz.t_id
+	    gewaesserbasisgeometrie netz on seg.rgewaesser = netz.t_id;
 
 
-drop view absturz_v cascade;
+drop view if exists absturz_v;
 create view absturz_v as  
 select
 	    ST_LineInterpolatePoint(ST_CurveToLine(netz.geometrie),ST_LineLocatePoint(ST_CurveToLine(netz.geometrie), seg.geometrie)) as geometrie,
@@ -126,10 +126,10 @@ select
 	  from
 	    absturz seg
 	  join
-	    gewaesserbasisgeometrie netz on seg.rgewaesser = netz.t_id
+	    gewaesserbasisgeometrie netz on seg.rgewaesser = netz.t_id;
 
 
-drop view errorfischenz_v cascade;
+drop view if exists errorfischenz_v;
 create view errorfischenz_v as  
 select * from
 	  (select
@@ -143,10 +143,10 @@ select * from
 	    fischenzabschnitt_fischenz_v seg
 	  join
 	    gewaesserbasisgeometrie netz on seg.rgewaesser = netz.t_id) q
-  where q.m1 = q.m2 or q.m1 = 'NaN'::numeric or q.m2 = 'NaN'::numeric
+  where q.m1 = q.m2 or q.m1 = 'NaN'::numeric or q.m2 = 'NaN'::numeric;
 
 
-drop view erroroekomorph_v cascade;
+drop view if exists erroroekomorph_v;
 create view erroroekomorph_v as 
 select * from
 	  (select
@@ -161,4 +161,4 @@ select * from
 	    oekomorph seg
 	  join
 	    gewaesserbasisgeometrie netz on seg.rgewaesser = netz.t_id) q
-  where q.m1 = q.m2 or q.m1 = 'NaN'::numeric or q.m2 = 'NaN'::numeric
+  where q.m1 = q.m2 or q.m1 = 'NaN'::numeric or q.m2 = 'NaN'::numeric;
