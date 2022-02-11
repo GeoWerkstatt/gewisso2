@@ -32,7 +32,7 @@ VERSION "2022-02-28" =
 
             !! übernommen vom externen Katalog (https://models.geo.admin.ch/BAFU/Revitalisierung_Fliessgewaesser_Catalogues_V1_1.xml)
             AbsturzTyp = (nicht_bestimmt, natuerlich, kuenstlich);
-            AbsturzMaterial = (natuerlich_klein, Holz, Fels_Steinbloecke, Beton_Steinpfaesterung, andere_unbekannt);
+            AbsturzMaterial = (natuerlich_klein, Holz, Fels_Steinbloecke, Beton_Steinpflaesterung, andere_unbekannt);
             BauwerkTyp = (nicht_bestimmt, Sohlrampe_sehr_rauh_aufgeloest, Sohlrampe_glatt_wenigrauh, Stauwehr, Streichwehr, Tirolerwehr, Talsperre, Fischpass, Geschieberueckhaltesperre, Schleuse, Durchlass, Bruecke, Seitenentnahme_ohne_Wehr, Furt, Typ_14);
             Klasse = (natuerlich_naturnah, wenig_beeintraechtigt, stark_beeintraechtigt, naturfremd_kuenstlich, eingedolt, nicht_bestimmt);
             Totholz = (nicht_bestimmt, Ansammlungen, zerstreut, kein_vereinzelt);
