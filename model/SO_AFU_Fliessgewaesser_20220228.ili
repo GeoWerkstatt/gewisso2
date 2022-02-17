@@ -26,14 +26,14 @@ VERSION "2022-02-28" =
             AbschnittsTyp = (offen, eingedolt, parallel, Seeufer, virtuell, Karst, versickert, Stausee, Insel, unterirdisch, Kanal, Entlastung, 
                             Graben, Drainage, andere, Kanal_eingedolt, Entlastung_eingedolt, Graben_eingedolt, Drainage_eingedolt, andere_eingedolt, parallel_eingedolt);
             Eigentumsart = (Staat, Privat, unbekannt);
-            Digitalisierungsdetail = (unbekannt, SE_Ausf_Plan, Uebers_Plan, SE_GEP_GKP, Vermessung_GBPlan, Melioration, Projektplan, Leitungskataster, Orthophoto) ;    !! abklären: In daten existiert ein Wert 9, in Katalog jedoch nicht?)
+            Digitalisierungsdetail = (unbekannt, SE_Ausf_Plan, Uebers_Plan, SE_GEP_GKP, Vermessung_GBPlan, Melioration, Projektplan, Leitungskataster, Orthophoto) ;    
             UmfeldTyp = (nicht_beurteilt, Wald, Dauergruenland_Wiese, Ackerland_Kunstwiese, befestigte_Flur_Wanderwege, Siedlung_Infrastruktur);
-            Datenherr = (CH, SO);       !! Fällt gemäss OJ evtl. weg
+            Datenherr = (CH, SO);       
 
             !! übernommen vom externen Katalog (https://models.geo.admin.ch/BAFU/Revitalisierung_Fliessgewaesser_Catalogues_V1_1.xml)
             AbsturzTyp = (nicht_bestimmt, natuerlich, kuenstlich);
             AbsturzMaterial = (natuerlich_klein, Holz, Fels_Steinbloecke, Beton_Steinpflaesterung, andere_unbekannt);
-            BauwerkTyp = (nicht_bestimmt, Sohlrampe_sehr_rauh_aufgeloest, Sohlrampe_glatt_wenigrauh, Stauwehr, Streichwehr, Tirolerwehr, Talsperre, Fischpass, Geschieberueckhaltesperre, Schleuse, Durchlass, Bruecke, Seitenentnahme_ohne_Wehr, Furt, Typ_14);
+            BauwerkTyp = (nicht_bestimmt, Sohlrampe_sehr_rauh_aufgeloest, Sohlrampe_glatt_wenigrauh, Stauwehr, Streichwehr, Tirolerwehr, Talsperre, Fischpass, Geschieberueckhaltesperre, Schleuse, Durchlass, Bruecke, Seitenentnahme_ohne_Wehr, Furt);
             Klasse = (natuerlich_naturnah, wenig_beeintraechtigt, stark_beeintraechtigt, naturfremd_kuenstlich, eingedolt, nicht_bestimmt);
             Totholz = (nicht_bestimmt, Ansammlungen, zerstreut, kein_vereinzelt);
             Bewuchs = (nicht_bestimmt, kein_gering, maessig_stark, uebermaessig_wuchernd);
@@ -43,19 +43,12 @@ VERSION "2022-02-28" =
             SohlMaterial = (nicht_bestimmt, Steinschuettung_Rauhbett, andere_dicht);
             SohlVerbau = (nicht_bestimmt, keine, vereinzelt, maessig, groessere, ueberwiegend, vollstaendig);
             VarTiefe = (nicht_bestimmt, ausgepraegt, maessig, keine);
-            VarBreite = (nicht_bestimmt, ausgepraegt, eingeschraenkt, keine);
-
-            STRUCTURE BreiteUferBereich = 
-                Uferbreite: MANDATORY 0.00 .. 1000.00 [INTERLIS.m]; 
-                Beurteilung: (nichtbeurteilt, genuegend, ungenuegend, keinUferbereich);        
-            END BreiteUferBereich;    
+            VarBreite = (nicht_bestimmt, ausgepraegt, eingeschraenkt, keine);  
     
             CLASS Basisobjekt (ABSTRACT) = 
                 Erhebungsdatum: INTERLIS.XMLDate;          
-                Importdatum: INTERLIS.XMLDate;
-                Exportdatum: INTERLIS.XMLDate;              !! Notwendigkeit wird geklärt     
+                Importdatum: INTERLIS.XMLDate;   
             END Basisobjekt;
-
 
         TOPIC Fliessgewaesser = 
 
@@ -70,20 +63,16 @@ VERSION "2022-02-28" =
             CLASS GewaesserEigenschaften EXTENDS Basisobjekt = 
                 Geometrie: MANDATORY GeometryCHLV95_V1.Line;
                 Name: MANDATORY TEXT*64;                    !! im Falle mehrerer Name pro GNRSO wird hier der zusammengesetzte Name übertragen (Übergangslösung)
-                DatenherrGwB: Datenherr;                    !! Notwendigkeit/Mapping wird geklärt 
-                HauptGNr: 0 .. 9999;                         
-                NebenGNr: 0 .. 9999;
-                GEWISSNr: 0 .. 999999;
-                Abschnitt: 0 .. 9999;
+                DatenherrGwB: Datenherr;                    
                 Typ: AbschnittsTyp;                     
                 Groesse: (klein, mittel, gross);
                 GDENR: 1 .. 9999;
                 GDENR2: 1 .. 9999;
                 Qualitaet: Digitalisierungsdetail;
-                Eigentum: Eigentumsart;                     !! Mapping wird geklärt
-                VorfluterGEWISSNr:   0 .. 9999;             !! Notwendigkeit wird geklärt 
-                VorfluterNebenGNr:   0 .. 9999;             !! Notwendigkeit wird geklärt 
-                DatenherrKm: Datenherr;                     !! Notwendigkeit/Mapping wird geklärt 
+                Eigentum: Eigentumsart;                     
+                VorfluterGEWISSNr:   0 .. 9999;              
+                VorfluterNebenGNr:   0 .. 999999;              
+                DatenherrKm: Datenherr;                     
                 Strahler: -99 .. 99;              
             END GewaesserEigenschaften; 
 
@@ -99,24 +88,26 @@ VERSION "2022-02-28" =
 
             CLASS OekomorphBasis (ABSTRACT) EXTENDS Basisobjekt =
                 AbschnittId: 1 .. 99999;
-                Sohlenbreite: MANDATORY 0.00 .. 1000.00 [INTERLIS.m]; !! gsbreite
-                Eindolung: INTERLIS.BOOLEAN;            !! eindol
-                Breitenvariabilitaet: MANDATORY VarBreite;  !! bvar !! todo: Katalog suchen! 
-                Tiefenvariabilitaet: VarTiefe; !!tvar !! todo: Katalog suchen!
-                Sohlenverbauung: MANDATORY SohlVerbau;     !!sohlver 
-                Sohlmaterial: MANDATORY SohlMaterial;    !!sohlmat   
-                BoeschungsfussverbauLinks: MANDATORY BoeschVerbau; !!lbukver 
-                BoeschungsfussverbauRechts: MANDATORY BoeschVerbau; !!rbukver 
-                MaterialLinks: MANDATORY BoeschMaterial; !!lbukmat  
-                MaterialRechts: MANDATORY BoeschMaterial; !!rbukmat 
-                UferbreiteLinks: MANDATORY BreiteUferBereich; !!lufbebre, luferber in Structure
-                UferbreiteRechts: MANDATORY BreiteUferBereich; !!rufbebre, ruferber in Structure
-                UferbeschaffenheitLinks: MANDATORY Ufer;  !! Vermutung: lufbebew
-                UferbeschaffenheitRechts: MANDATORY Ufer;  !! Vermutung: rufbebew 
-                Algenbewuchs: Bewuchs;  !! bewalgen
-                Makrophytenbewuchs: Bewuchs;  !! bewmakro
-                Totholz: Totholz;  !! totholz
-                Klasse: MANDATORY Klasse;   !! klasse
+                Sohlenbreite: MANDATORY 0.00 .. 1000.00 [INTERLIS.m];
+                Eindolung: INTERLIS.BOOLEAN;
+                Breitenvariabilitaet: MANDATORY VarBreite;
+                Tiefenvariabilitaet: VarTiefe;
+                Sohlenverbauung: MANDATORY SohlVerbau;
+                Sohlmaterial: MANDATORY SohlMaterial;
+                BoeschungsfussverbauLinks: MANDATORY BoeschVerbau;
+                BoeschungsfussverbauRechts: MANDATORY BoeschVerbau;
+                MaterialLinks: MANDATORY BoeschMaterial;
+                MaterialRechts: MANDATORY BoeschMaterial;
+                UferbreiteLinks: MANDATORY 0.00 .. 1000.00 [INTERLIS.m];
+                BeurteilungUferbreiteLinks: (nichtbeurteilt, genuegend, ungenuegend, keinUferbereich);
+                UferbreiteRechts: MANDATORY 0.00 .. 1000.00 [INTERLIS.m];
+                BeurteilungUferbreiteRechts: (nichtbeurteilt, genuegend, ungenuegend, keinUferbereich);
+                UferbeschaffenheitLinks: MANDATORY Ufer;
+                UferbeschaffenheitRechts: MANDATORY Ufer; 
+                Algenbewuchs: Bewuchs;
+                Makrophytenbewuchs: Bewuchs;
+                Totholz: Totholz;
+                Klasse: MANDATORY Klasse;
                 UeberhVegetation: (ueber30,von5bis30,bis5,keine);
                 DomKorngroesse: (nicht_beurteilt,Sand_Schlick_Schlamm,erbsenBisbaumnussgross,baumnussBiskopfgross,kopfgross);
                 NutzungUmlandLinks: UmfeldTyp;
@@ -127,15 +118,15 @@ VERSION "2022-02-28" =
             END OekomorphBasis;
 
             CLASS AbsturzBasis EXTENDS Basisobjekt =
-                Nummer: MANDATORY TEXT*10; !!abstnr
-                Typ: MANDATORY AbsturzTyp;    !! absttyp
-                Material: MANDATORY AbsturzMaterial;     !! abstmat   
-                Hoehe: MANDATORY 0 .. 30000 [Units.cm];        !! absthoeh  
+                Nummer: MANDATORY TEXT*10;
+                Typ: MANDATORY AbsturzTyp;
+                Material: MANDATORY AbsturzMaterial;
+                Hoehe: MANDATORY 0 .. 30000 [Units.cm];
             END AbsturzBasis;
 
             CLASS BauwerkBasis EXTENDS Basisobjekt = 
-                BauwerkNr: MANDATORY 0 .. 999999; !! bauwnr
-                Typ: MANDATORY BauwerkTyp;   !! bauwtyp 
+                BauwerkNr: MANDATORY 0 .. 999999;
+                Typ: MANDATORY BauwerkTyp;
                 Hoehe: MANDATORY 0 .. 30000 [Units.cm];                 
             END BauwerkBasis;
 
@@ -150,7 +141,7 @@ VERSION "2022-02-28" =
             END Absturz;
 
             !! Hilfsklasse für die Definition eines Bauwerks auf einem Gewässer
-            CLASS Bauwerk EXTENDS Basisobjekt = 
+            CLASS Bauwerk EXTENDS BauwerkBasis = 
                 Geometrie: MANDATORY GeometryCHLV95_V1.Coord2;               
             END Bauwerk;
 
