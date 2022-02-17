@@ -162,3 +162,16 @@ select * from
 	  join
 	    gewaesserbasisgeometrie netz on seg.rgewaesser = netz.t_id) q
   where q.m1 = q.m2 or q.m1 = 'NaN'::numeric or q.m2 = 'NaN'::numeric;
+
+
+drop view if exists kilometrierung_v;
+create view kilometrierung_v as
+select gnrso, kwert, ST_LineInterpolatePoint(line_geom, kwert / geom_length) as geometrie
+from
+	(select
+		gnrso,
+		ST_CurveToLine(geometrie) as line_geom,
+		ST_Length(geometrie) as geom_length,
+		generate_series(0, cast(floor(ST_Length(geometrie)) as int), 20) as kwert
+	from
+		gewaesserbasisgeometrie g) q;
