@@ -13,6 +13,7 @@ Produktionsumgebung für das Gewässer Informationssystem des Kt. Solothurn ausg
 | /qgis/gewisso.qgs  													| QGIS-Projektdatei für Gewisso																																										|
 
 
-##Spezielle Konfigurationen gewisso.qgs:
+
+**Spezielle Konfigurationen gewisso.qgs:**
 - Beziehungsreferenzen gemäss INTERLIS Modell
 - Aufzählwerte mit ilicode 
