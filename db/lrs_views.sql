@@ -1,18 +1,21 @@
+-- Views für die GEWISSO2-Layer
+-- 14.02.2022, oliver.grimm@geowerkstatt.ch 
+
 
 drop view if exists gewaesser_v;
 create view gewaesser_v
-as select * from 		  
+as select bg.*,eig.strahler,eig.datenherrkm, eig.vorfluternebengnr , eig.vorflutergewissnr , eig.eigentum , eig.qualitaet , eig.gdenr2 , eig.gdenr , eig.groesse , eig.typ , eig.datenherrgwb  from 		  
 		    GewaesserBasisgeometrie bg
 		  join
-		    GewaesserEigenschaften eig on bs.rgewaesser = eig.t_id;
+		    GewaesserEigenschaften eig on eig.rgewaesser = bg.t_id;
 
 
 drop view if exists oekomorph_v;
 create view oekomorph_v as 
 select 
   r.t_id,
-  attr.abschnittid,
-  attr.abschnittnr ,
+  --attr.abschnittid,
+  --attr.abschnittnr ,
   attr.sohlenbreite ,
   attr.eindolung ,
   attr.breitenvariabilitaet ,
@@ -56,21 +59,21 @@ join
   oekomorph attr on r.t_id = attr.t_id;
 
  
-drop view if exists fischenzabschnitt_fischenz_v;  
-create view fischenzabschnitt_fischenz_v
-as select seg.t_id, seg.geometrie, seg.nutzung, ent.revierid, ent.fischenzname, ent.fischenzbeschreibung, ent.eigentum, ent.bonitierung, ent.fischbestand, ent.fischerei, ent.rgewaesser from 		  
-		    fischenzabschnitt seg
+drop view if exists fischrevierabschnitt_fischrevier_v;  
+create view fischrevierabschnitt_fischrevier_v
+as select seg.t_id, seg.geometrie, seg.nutzung, ent.revierid, ent.aname , ent.beschreibung, ent.eigentum, ent.bonitierung, ent.fischbestand, ent.fischerei , seg.rgewaesser from 		  
+		    fischrevierabschnitt seg
 		  join
-		    fischenz ent on seg.rfischenz = ent.t_id;
+		    fischrevier ent on seg.rfischrevier = ent.t_id;
 
  
-drop view if exists fischenz_v;
-create view fischenz_v as  
+drop view if exists fischrevier_v;
+create view fischrevier_v as  
 select 
   r.t_id,
   r.revierid,
-  r.fischenzname,
-  r.fischenzbeschreibung,
+  r.aname,
+  r.beschreibung,
   r.eigentum,
   r.bonitierung,
   r.fischbestand,
@@ -82,16 +85,16 @@ from
 	    ST_LineLocatePoint(ST_CurveToLine(netz.geometrie), ST_StartPoint(seg.geometrie)) as m1,
 	    ST_LineLocatePoint(ST_CurveToLine(netz.geometrie), ST_EndPoint(seg.geometrie)) as m2,
 	    seg.*,
-	  	netz.aname,
+	  	netz.aname as gewname,
 	  	netz.gnrso,
 	    ST_AsText(ST_CurveToLine(netz.geometrie)) as ng
 	  from
-	    fischenzabschnitt_fischenz_v seg
+	    fischrevierabschnitt_fischrevier_v seg
 	  join
 	    gewaesserbasisgeometrie netz on seg.rgewaesser = netz.t_id) q
   where q.m1 != q.m2 and (q.m1 != 'NaN'::numeric or q.m2 != 'NaN'::numeric)) r
 join
-  fischenzabschnitt_fischenz_v attr on r.t_id = attr.t_id;
+  fischrevierabschnitt_fischrevier_v attr on r.t_id = attr.t_id;
 
 
 drop view if exists bauwerk_v;
@@ -103,10 +106,9 @@ select
 	    seg.typ,
 	    seg.hoehe,
 	    seg.erhebungsdatum,
-	    seg.importdatum,
-	    seg.exportdatum 
+	    seg.importdatum 
 	  from
-	    bauwerk seg
+	  	bauwerk seg
 	  join
 	    gewaesserbasisgeometrie netz on seg.rgewaesser = netz.t_id;
 
@@ -121,26 +123,25 @@ select
 	    seg.material ,
 	    seg.hoehe,
 	    seg.erhebungsdatum,
-	    seg.importdatum,
-	    seg.exportdatum 
+	    seg.importdatum
 	  from
 	    absturz seg
 	  join
 	    gewaesserbasisgeometrie netz on seg.rgewaesser = netz.t_id;
 
 
-drop view if exists errorfischenz_v;
-create view errorfischenz_v as  
+drop view if exists errorfischrevier_v;
+create view errorfischrevier_v as  
 select * from
 	  (select
 	    ST_LineLocatePoint(ST_CurveToLine(netz.geometrie), ST_StartPoint(seg.geometrie)) as m1,
 	    ST_LineLocatePoint(ST_CurveToLine(netz.geometrie), ST_EndPoint(seg.geometrie)) as m2,
 	    seg.*,
-	  	netz.aname,
+	  	netz.aname as gewname,
 	  	netz.gnrso,
 	    ST_AsText(ST_CurveToLine(netz.geometrie)) as ng
 	  from
-	    fischenzabschnitt_fischenz_v seg
+	    fischrevierabschnitt_fischrevier_v seg
 	  join
 	    gewaesserbasisgeometrie netz on seg.rgewaesser = netz.t_id) q
   where q.m1 = q.m2 or q.m1 = 'NaN'::numeric or q.m2 = 'NaN'::numeric;
@@ -162,10 +163,11 @@ select * from
 	  join
 	    gewaesserbasisgeometrie netz on seg.rgewaesser = netz.t_id) q
   where q.m1 = q.m2 or q.m1 = 'NaN'::numeric or q.m2 = 'NaN'::numeric;
-
-
-drop view if exists kilometrierung_v;
-create view kilometrierung_v as
+  
+ 
+ 
+drop view gewaesserkilometrierung_v;
+create view gewaesserkilometrierung_v as
 select gnrso, kwert, ST_LineInterpolatePoint(line_geom, kwert / geom_length) as geometrie
 from
 	(select
