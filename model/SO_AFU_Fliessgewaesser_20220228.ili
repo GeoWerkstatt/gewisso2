@@ -12,6 +12,7 @@ INTERLIS 2.3;
  * !! 2021-12-13 | OG  | Finalisierung nach Besprechung Entwurf
  * !! 2022-01-20 | OG  | Verschiedene Anpassungen nach Projekt-Zwischenbesprechung
  * !! 2022-01-20 | OJ  | Umbenennungen zwecks Richtlinienkonformität Kt. Solothurn
+ * !! 2022-02-18 | OG  | Name in Gewaessereigenschaften entfernt
  * !!==============================================================================
  */
 !!@ technicalContact = mailto:agi@bd.so.ch
@@ -62,7 +63,6 @@ VERSION "2022-02-28" =
             !! Hilfsklasse für die Definition von Eigenschaften eines Gewässerabschnitts
             CLASS GewaesserEigenschaften EXTENDS Basisobjekt = 
                 Geometrie: MANDATORY GeometryCHLV95_V1.Line;
-                Name: MANDATORY TEXT*64;                    !! im Falle mehrerer Name pro GNRSO wird hier der zusammengesetzte Name übertragen (Übergangslösung)
                 DatenherrGwB: Datenherr;                    
                 Typ: AbschnittsTyp;                     
                 Groesse: (klein, mittel, gross);
