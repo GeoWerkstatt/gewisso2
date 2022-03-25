@@ -5,4 +5,6 @@
 *.cmd
 *.bat
 *.sh
-/.vs/gewisso2/v16
+
+# Visual Studio options directory
+.vs/
