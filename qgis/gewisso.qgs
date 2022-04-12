@@ -1399,7 +1399,7 @@
                 <Option type="bool" name="MapIdentification" value="true"/>
                 <Option type="bool" name="OrderByValue" value="true"/>
                 <Option type="bool" name="ReadOnly" value="false"/>
-                <Option type="QString" name="ReferencedLayerDataSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='t_id' srid=2056 type=LineString checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;gewaesserbasisgeometrie&quot; (geometrie)"/>
+                <Option type="QString" name="ReferencedLayerDataSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='t_id' srid=2056 type=LineString checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;gewaesserbasisgeometrie&quot; (geometrie)"/>
                 <Option type="QString" name="ReferencedLayerId" value="GewaesserBasisgeometrie_1c86e16c_ef4a_4416_a1f9_717bfdb1a62c"/>
                 <Option type="QString" name="ReferencedLayerName" value="GewaesserBasisgeometrie"/>
                 <Option type="QString" name="ReferencedLayerProviderKey" value="postgres"/>
@@ -1429,7 +1429,7 @@
                 <Option type="QString" name="Layer" value="AbsturzMaterial_9d34214b_733e_43df_8ea1_440ac946588e"/>
                 <Option type="QString" name="LayerName" value="AbsturzMaterial"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;absturzmaterial&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;absturzmaterial&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -1971,7 +1971,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="bool" name="MapIdentification" value="true"/>
                 <Option type="bool" name="OrderByValue" value="true"/>
                 <Option type="bool" name="ReadOnly" value="false"/>
-                <Option type="QString" name="ReferencedLayerDataSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='t_id' srid=2056 type=LineString checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;gewaesserbasisgeometrie&quot; (geometrie)"/>
+                <Option type="QString" name="ReferencedLayerDataSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='t_id' srid=2056 type=LineString checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;gewaesserbasisgeometrie&quot; (geometrie)"/>
                 <Option type="QString" name="ReferencedLayerId" value="GewaesserBasisgeometrie_1c86e16c_ef4a_4416_a1f9_717bfdb1a62c"/>
                 <Option type="QString" name="ReferencedLayerName" value="GewaesserBasisgeometrie"/>
                 <Option type="QString" name="ReferencedLayerProviderKey" value="postgres"/>
@@ -3723,7 +3723,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="FischRevierAbschnitt_Nutzung_1676f035_956f_42e6_a296_43f76d969bff"/>
                 <Option type="QString" name="LayerName" value="FischRevierAbschnitt_Nutzung"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;fischrevierabschnitt_nutzung&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;fischrevierabschnitt_nutzung&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -3755,7 +3755,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="bool" name="MapIdentification" value="true"/>
                 <Option type="bool" name="OrderByValue" value="true"/>
                 <Option type="bool" name="ReadOnly" value="false"/>
-                <Option type="QString" name="ReferencedLayerDataSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='t_id' srid=2056 type=LineString checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;gewaesserbasisgeometrie&quot; (geometrie)"/>
+                <Option type="QString" name="ReferencedLayerDataSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='t_id' srid=2056 type=LineString checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;gewaesserbasisgeometrie&quot; (geometrie)"/>
                 <Option type="QString" name="ReferencedLayerId" value="GewaesserBasisgeometrie_1c86e16c_ef4a_4416_a1f9_717bfdb1a62c"/>
                 <Option type="QString" name="ReferencedLayerName" value="GewaesserBasisgeometrie"/>
                 <Option type="QString" name="ReferencedLayerProviderKey" value="postgres"/>
@@ -4203,7 +4203,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="Eigentumsart_e8bc856c_ef5f_4df8_a124_2aae9ca21af6"/>
                 <Option type="QString" name="LayerName" value="Eigentumsart"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;eigentumsart&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;eigentumsart&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -4224,7 +4224,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="FischRevier_Fischbestand_bbc85fdf_e435_47b6_848e_7d6816620c0b"/>
                 <Option type="QString" name="LayerName" value="FischRevier_Fischbestand"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;fischrevier_fischbestand&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;fischrevier_fischbestand&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -4245,7 +4245,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="FischRevier_Fischerei_031a9daf_8b97_48d4_8f6b_abb37a5b9988"/>
                 <Option type="QString" name="LayerName" value="FischRevier_Fischerei"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;fischrevier_fischerei&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;fischrevier_fischerei&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -5371,7 +5371,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="GewaesserEigenschaften_Groesse_bea4f22d_ebc6_4452_a33e_dacc9ba9dab9"/>
                 <Option type="QString" name="LayerName" value="GewaesserEigenschaften_Groesse"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;gewaessereigenschaften_groesse&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;gewaessereigenschaften_groesse&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -5421,7 +5421,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="Digitalisierungsdetail_7961db21_79f4_4fdc_b667_3dd7a10f0ffd"/>
                 <Option type="QString" name="LayerName" value="Digitalisierungsdetail"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;digitalisierungsdetail&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;digitalisierungsdetail&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -5442,7 +5442,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="Eigentumsart_e8bc856c_ef5f_4df8_a124_2aae9ca21af6"/>
                 <Option type="QString" name="LayerName" value="Eigentumsart"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;eigentumsart&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;eigentumsart&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -5471,7 +5471,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="bool" name="MapIdentification" value="true"/>
                 <Option type="bool" name="OrderByValue" value="true"/>
                 <Option type="bool" name="ReadOnly" value="false"/>
-                <Option type="QString" name="ReferencedLayerDataSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='t_id' srid=2056 type=LineString checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;gewaesserbasisgeometrie&quot; (geometrie)"/>
+                <Option type="QString" name="ReferencedLayerDataSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='t_id' srid=2056 type=LineString checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;gewaesserbasisgeometrie&quot; (geometrie)"/>
                 <Option type="QString" name="ReferencedLayerId" value="GewaesserBasisgeometrie_1c86e16c_ef4a_4416_a1f9_717bfdb1a62c"/>
                 <Option type="QString" name="ReferencedLayerName" value="GewaesserBasisgeometrie"/>
                 <Option type="QString" name="ReferencedLayerProviderKey" value="postgres"/>
@@ -7073,7 +7073,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="bool" name="MapIdentification" value="true"/>
                 <Option type="bool" name="OrderByValue" value="true"/>
                 <Option type="bool" name="ReadOnly" value="false"/>
-                <Option type="QString" name="ReferencedLayerDataSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='t_id' srid=2056 type=LineString checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;gewaesserbasisgeometrie&quot; (geometrie)"/>
+                <Option type="QString" name="ReferencedLayerDataSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='t_id' srid=2056 type=LineString checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;gewaesserbasisgeometrie&quot; (geometrie)"/>
                 <Option type="QString" name="ReferencedLayerId" value="GewaesserBasisgeometrie_1c86e16c_ef4a_4416_a1f9_717bfdb1a62c"/>
                 <Option type="QString" name="ReferencedLayerName" value="GewaesserBasisgeometrie"/>
                 <Option type="QString" name="ReferencedLayerProviderKey" value="postgres"/>
@@ -7114,7 +7114,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="VarBreite_c47ee3de_b222_4f72_acb3_966747d68be9"/>
                 <Option type="QString" name="LayerName" value="VarBreite"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;varbreite&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;varbreite&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7135,7 +7135,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="VarTiefe_c14a7dc0_03b5_4421_ba07_0af93c26a440"/>
                 <Option type="QString" name="LayerName" value="VarTiefe"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;vartiefe&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;vartiefe&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7156,7 +7156,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="SohlVerbau_e07d04c8_ae88_4cb9_9dad_44f8e240fa6e"/>
                 <Option type="QString" name="LayerName" value="SohlVerbau"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;sohlverbau&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;sohlverbau&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7177,7 +7177,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="SohlMaterial_799e8c55_2e35_45b0_901b_272122c79053"/>
                 <Option type="QString" name="LayerName" value="SohlMaterial"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;sohlmaterial&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;sohlmaterial&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7198,7 +7198,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="BoeschVerbau_fc7a1a01_1f4d_4acc_bc7a_3a358a37109a"/>
                 <Option type="QString" name="LayerName" value="BoeschVerbau"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;boeschverbau&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;boeschverbau&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7219,7 +7219,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="BoeschVerbau_fc7a1a01_1f4d_4acc_bc7a_3a358a37109a"/>
                 <Option type="QString" name="LayerName" value="BoeschVerbau"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;boeschverbau&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;boeschverbau&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7240,7 +7240,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="BoeschMaterial_9751153f_6d59_4e24_95e1_cb9074037639"/>
                 <Option type="QString" name="LayerName" value="BoeschMaterial"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;boeschmaterial&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;boeschmaterial&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7261,7 +7261,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="BoeschMaterial_9751153f_6d59_4e24_95e1_cb9074037639"/>
                 <Option type="QString" name="LayerName" value="BoeschMaterial"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;boeschmaterial&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;boeschmaterial&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7304,7 +7304,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="Ufer_54a1f5b7_29e0_4528_b0c6_c9e99af5112a"/>
                 <Option type="QString" name="LayerName" value="Ufer"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;ufer&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;ufer&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7325,7 +7325,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="Ufer_54a1f5b7_29e0_4528_b0c6_c9e99af5112a"/>
                 <Option type="QString" name="LayerName" value="Ufer"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;ufer&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;ufer&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7346,7 +7346,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="BewAlgen_afbd3dca_4fae_46f4_8ffe_b78c84021999"/>
                 <Option type="QString" name="LayerName" value="BewAlgen"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;bewalgen&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;bewalgen&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7367,7 +7367,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="BewMakro_c5eb96c4_7bc6_47d0_b56c_355e8a43a8ac"/>
                 <Option type="QString" name="LayerName" value="BewMakro"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;bewmakro&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;bewmakro&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7388,7 +7388,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="Totholz_49a4af3a_5c68_4d2d_864d_9da0a426e2ae"/>
                 <Option type="QString" name="LayerName" value="Totholz"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;totholz&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;totholz&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7409,7 +7409,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="OekomorphBasis_UeberhVegetation_bba23cf8_1389_4c86_8446_02f3f71d7ec0"/>
                 <Option type="QString" name="LayerName" value="OekomorphBasis_UeberhVegetation"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;oekomorphbasis_ueberhvegetation&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;oekomorphbasis_ueberhvegetation&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7430,7 +7430,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="OekomorphBasis_DomKorngroesse_3f459662_16f4_426a_9080_d6bcba157c74"/>
                 <Option type="QString" name="LayerName" value="OekomorphBasis_DomKorngroesse"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;oekomorphbasis_domkorngroesse&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;oekomorphbasis_domkorngroesse&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7451,7 +7451,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="UmfeldTyp_3e5c9ceb_a82d_4719_94da_be568d33bcdb"/>
                 <Option type="QString" name="LayerName" value="UmfeldTyp"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;umfeldtyp&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;umfeldtyp&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
@@ -7472,7 +7472,7 @@ def my_form_open(dialog, layer, feature):
                 <Option type="QString" name="Layer" value="UmfeldTyp_3e5c9ceb_a82d_4719_94da_be568d33bcdb"/>
                 <Option type="QString" name="LayerName" value="UmfeldTyp"/>
                 <Option type="QString" name="LayerProviderName" value="postgres"/>
-                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 user='postgres' key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;umfeldtyp&quot;"/>
+                <Option type="QString" name="LayerSource" value="dbname='gewisso' host=postgis.geow.cloud port=65432 key='itfcode' checkPrimaryKeyUnicity='1' table=&quot;gewisso2&quot;.&quot;umfeldtyp&quot;"/>
                 <Option type="int" name="NofColumns" value="1"/>
                 <Option type="bool" name="OrderByValue" value="false"/>
                 <Option type="bool" name="UseCompleter" value="false"/>
